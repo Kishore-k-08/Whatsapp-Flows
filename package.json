@@ -1,0 +1,21 @@
+{
+  "name": "whatsapp-flows-endpoint",
+  "version": "1.0.0",
+  "description": "An example endpoint server for WhatsApp Flows",
+  "main": "src/server.js",
+  "type": "module",  
+  "scripts": {
+    "start": "export OPENSSL_CONF=/dev/null && node src/server.js"
+  },
+  "author": "WhatsApp Flows Team",
+  "license": "MIT",
+  "dependencies": {
+    "all": "^0.0.0",
+    "dotenv-flow": "^4.1.0",
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

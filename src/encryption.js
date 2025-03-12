@@ -13,7 +13,7 @@ export const decryptRequest = (body, privatePem, passphrase) => {
   try {
     if (!passphrase) {
       throw new Error(
-        "Passphrase is empty. Please include passphrase argument to generate the keys like: node src/keyGenerator.js {passphrase}"
+        "Passphrase is empty.  Please include passphrase argument to generate the keys like: node src/keyGenerator.js {passphrase}"
       );
     }
 

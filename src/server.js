@@ -30,7 +30,7 @@ const {
 app.use(
   express.json({
     // store the raw request body to use it for signature verification
-    verify: (req, res, buf, encoding) => {
+    verify: (req, res, buf, encoding) => {  
       console.log(req);
       req.rawBody = buf?.toString(encoding || "utf8");
 
@@ -53,22 +53,10 @@ app.get('/test', (req, res) => {
     res.send('This is a test responsdcdde(pincode)!');
 });
 
-app.get('/flow/APPOINTMENT', (req, res) => {
-  console.log("➡️ Received request for APPOINTMENT screen");
-   return res.json(SCREEN_RESPONSES.APPOINTMENT);
-});
-
-  // if (SCREEN_RESPONSES.APPOINTMENT) {
-  //     console.log("✅ Returning APPOINTMENT screen data");
-  //     return res.json(SCREEN_RESPONSES.APPOINTMENT);
-  // }
-
-  // console.log("❌ APPOINTMENT screen not found!");
-  // return res.status(404).json({ error: "APPOINTMENT screen not found" });
-
-
-
 app.post("/", async (req, res) => {
+
+  //not validating access token.
+  
   // if (!PRIVATE_KEY) {
   //   throw new Error(
   //     'Private key is empty. Please check your env variable "PRIVATE_KEY".'
